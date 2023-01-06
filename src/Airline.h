@@ -2,6 +2,11 @@
 // Created by NASA on 06/01/2023.
 //
 
+/**
+ * @file Airline.h
+ * Funções para ler ficheiros
+ */
+
 #ifndef AEDPROJETO2_AIRLINE_H
 #define AEDPROJETO2_AIRLINE_H
 

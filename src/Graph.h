@@ -9,6 +9,7 @@
 #include <list>
 #include <unordered_map>
 #import <math.h>
+#include <vector>
 #include "Flight.h"
 
 class Graph {
@@ -20,9 +21,8 @@ private:
     };
 public:
     unordered_map<string, Node> nodes;
-
     Graph();
-    void addEdge(Airport source, Airport target, Airline airline,float distance);
+    void addEdge(Airport src, Airport dest, Airline line, float weight);
     static float getDistance(float lat1, float lon1, float lat2, float lon2);
 };
 

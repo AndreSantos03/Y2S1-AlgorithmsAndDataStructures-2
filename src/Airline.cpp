@@ -2,6 +2,11 @@
 // Created by NASA on 06/01/2023.
 //
 
+/**
+ * @file Airline.cpp
+ * funções para obter informações sobre as companhias aéreas
+ */
+
 #include "Airline.h"
 
 Airline::Airline(){};
