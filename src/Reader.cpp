@@ -7,7 +7,7 @@
 unordered_map<string, Airline> Reader::readAirlines(){
     unordered_map<string, Airline> retHash;
     ifstream f;
-    f.open("/data.airlines.csv");
+    f.open("../data/airlines.csv");
     string buf;
     getline(f,buf,'\n');
     while(getline(f,buf,'\n')){
@@ -26,7 +26,7 @@ unordered_map<string, Airline> Reader::readAirlines(){
 unordered_map<string, Airport> Reader::readAirports() {
     unordered_map<string, Airport> retHash;
     ifstream f;
-    f.open("/data.airports.csv");
+    f.open("../data/airports.csv");
     string buf;
     getline(f,buf,'\n');
     while(getline(f,buf,'\n')){
@@ -48,7 +48,7 @@ unordered_map<string, Airport> Reader::readAirports() {
 Graph Reader::readFlights(unordered_map<string, Airline> airlines, unordered_map<string, Airport> airports) {
     Graph retGraph;
     ifstream f;
-    f.open("/data.flights.csv");
+    f.open("../data/flights.csv");
     string buf;
     getline(f,buf,'\n');
     while(getline(f,buf,'\n')){
