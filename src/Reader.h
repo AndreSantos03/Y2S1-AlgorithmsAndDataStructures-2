@@ -5,12 +5,14 @@
 #ifndef AEDPROJETO2_READER_H
 #define AEDPROJETO2_READER_H
 
+#include <fstream>
 #include <iostream>
 #include <unordered_map>
-#include <fstream>
 #include <sstream>
+#include <string>
 #include "Airline.h"
 #include "Airport.h"
+#include "Flight.h"
 #include "Graph.h"
 
 

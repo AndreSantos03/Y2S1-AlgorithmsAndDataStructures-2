@@ -6,11 +6,17 @@
 #define AEDPROJETO2_GRAPH_H
 
 
+#include <iostream>
 #include <list>
-#include <unordered_map>
-#import <math.h>
+#include <math.h>
 #include <vector>
+#include <unordered_map>
 #include "Flight.h"
+#include "Airport.h"
+#include "Airline.h"
+#include <set>
+#include <climits>
+#include <queue>
 
 class Graph {
 private:
@@ -23,6 +29,8 @@ public:
     unordered_map<string, Node> nodes;
     Graph();
     void addEdge(Airport src, Airport dest, Airline line, float weight);
+    vector<string> BFS(string s, string f, unordered_map<string, Airport> airports);
+    set<string> BFL(string s, int d);
     static float getDistance(float lat1, float lon1, float lat2, float lon2);
 };
 

@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AEDProjeto2.dir/src/Graph.cpp.obj.d"
   "CMakeFiles/AEDProjeto2.dir/src/Reader.cpp.obj"
   "CMakeFiles/AEDProjeto2.dir/src/Reader.cpp.obj.d"
+  "CMakeFiles/AEDProjeto2.dir/src/Terminal.cpp.obj"
+  "CMakeFiles/AEDProjeto2.dir/src/Terminal.cpp.obj.d"
   "CMakeFiles/AEDProjeto2.dir/src/main.cpp.obj"
   "CMakeFiles/AEDProjeto2.dir/src/main.cpp.obj.d"
   "libAEDProjeto2.dll.a"

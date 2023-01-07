@@ -11,6 +11,7 @@
 #define AEDPROJETO2_AIRPORT_H
 
 #include <iostream>
+#include <list>
 
 using namespace std;
 

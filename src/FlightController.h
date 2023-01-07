@@ -5,7 +5,13 @@
 #ifndef AEDPROJETO2_FLIGHTCONTROLLER_H
 #define AEDPROJETO2_FLIGHTCONTROLLER_H
 
+#include <iostream>
+#include <list>
 #include "Graph.h"
+#include "Flight.h"
+#include "Airline.h"
+#include "Airport.h"
+#include <unordered_map>
 #include "Reader.h"
 
 using namespace std;
