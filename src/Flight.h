@@ -16,7 +16,7 @@ class Flight {
 private:
     Airport source, target;
     Airline airline;
-    float distance, weight;
+    float distance;
 
 public:
     Flight(Airport source, Airport target, Airline airline, float distance);

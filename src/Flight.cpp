@@ -4,7 +4,7 @@
 
 #include "Flight.h"
 
-Flight::Flight(Airport source, Airport target, Airline airline, float distance){
+Flight::Flight(Airport source, Airport target, Airline airline, float weight){
     this->source = source;
     this->target = target;
     this->airline = airline;

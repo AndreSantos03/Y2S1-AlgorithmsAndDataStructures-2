@@ -20,30 +20,44 @@ void Terminal::IO() {
 }
 
 void Terminal::getBestFlightPath() {
-    string sourceCode;
-    string targetCode;
-    while(true)
-    {
-        cout << "Enter source airport code: ";
-        cin >> choice;
-        if(algorithms.isValidAirportCode(choice)){
-            sourceCode = choice;
-            break;
+    while(true){
+        string sourceCode;
+        string targetCode;
+        while(true)
+        {
+            cout << "Enter source airport code: ";
+            cin >> choice;
+            if(algorithms.isValidAirportCode(choice)){
+                sourceCode = choice;
+                break;
+            }
+            else{
+                cout << "You entered an invalid airport code!" << endl;
+            }
+        }
+        while(true)
+        {
+            cout << "Enter destination airport code: ";
+            cin >> choice;
+            if(algorithms.isValidAirportCode(choice)){
+                targetCode = choice;
+                break;
+            }
+            else{
+                cout << "You entered an invalid airport code!" << endl;
+            }
+        }
+        if(sourceCode == targetCode){
+            cout << "You entered the same source and destination airports! ";
         }
         else{
-            cout << "You entered an invalid airport code!" << endl;
-        }
-    }
-    while(true)
-    {
-        cout << "Enter destination airport code: ";
-        cin >> choice;
-        if(algorithms.isValidAirportCode(choice)){
-            targetCode = choice;
+            vector<string> ans = algorithms.bestPath(sourceCode,targetCode);
+            cout << ans.size() << endl;
+            for(string oui: ans){
+                cout << oui << endl;
+            }
             break;
         }
-        else{
-            cout << "You entered an invalid airport code!" << endl;
-        }
     }
+    IO();
 }

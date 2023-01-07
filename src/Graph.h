@@ -19,13 +19,12 @@
 #include <queue>
 
 class Graph {
-private:
+public:
     //doesn't make sense to add edges, we'll just use flights
     struct Node{
         list<Flight> adj;
         bool visited;
     };
-public:
     unordered_map<string, Node> nodes;
     Graph();
     void addEdge(Airport src, Airport dest, Airline line, float weight);
