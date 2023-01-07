@@ -142,10 +142,31 @@ void Terminal::getBestFlightPath() {
             }
         }
     }
-    cout << "The fastest flight path is : \n" << endl;
-    vector<pair<string,string>> results = algorithms.bestPath(sourceCode,targetCode);
-    for(auto it = results.begin() + 1; it != results.end();it++){
-        cout << "You take a flight to the Airport in " << algorithms.getCityFromCode(it->first) <<  " through the airline " << it->second << "." << endl;
+    cout << "-----Choose an option!-----\n" << endl;
+    cout << "1: Choose specific airlines." << endl;
+    cout << "2: Choose the overall best flight path." << endl;
+    cin >> choice;
+    list<string> allowedAirlines;
+    if (choice == "1") {
+        while (true) {
+            cout << "Enter allowed airlines codes or enter q to process the data: ";
+            cin >> choice;
+            if (choice == "q") {
+                break;
+            } else {
+                allowedAirlines.push_back(choice);
+            }
+        }
+    }
+    try{
+        vector<pair<string,string>> results = algorithms.bestPath(sourceCode,targetCode,allowedAirlines);
+        cout << "The fastest flight path is : \n" << endl;
+        for(auto it = results.begin() + 1; it != results.end();it++){
+            cout << "You take a flight to the Airport in " << algorithms.getCityFromCode(it->first) <<  " through the airline " << it->second << "." << endl;
+        }
+    }
+    catch(...) {
+        cout << "Couldn't find a path with such airline!";
     }
     IO();
 }

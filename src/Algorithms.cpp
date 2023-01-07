@@ -49,7 +49,11 @@ bool Algorithms::isValidAirportCode(string code) {
  */
 
 //BFS Implementation with distance
-vector<pair<string,string>> Algorithms::bestPath(string a1, string a2){
+vector<pair<string,string>> Algorithms::bestPath(string a1, string a2, list<string> allowedAirlines) {
+    bool restricted = true;
+    if(allowedAirlines.empty()){
+        restricted = false;
+    }
     unordered_map<string, pair<int, vector<pair<string,string>>>> nodesPath;
     nodesPath[a1] = {0, {{a1,""}}};//string is irrelevant
 
@@ -63,11 +67,13 @@ vector<pair<string,string>> Algorithms::bestPath(string a1, string a2){
     while(!q.empty()){
         for(auto e:nodes[q.front()].adj){
             string eCode = e.get_target().get_code();
-            if( nodesPath[q.front()].first + 1 < nodesPath[eCode].first || !nodes[eCode].visited){
-                nodesPath[eCode] = {nodesPath[q.front()].first + 1, nodesPath[q.front()].second};
-                nodesPath[eCode].second.push_back({eCode,e.get_airline().get_callSign()});
-                nodes[eCode].visited = true;
-                q.push(eCode);
+            if( nodesPath[q.front()].first + 1 < nodesPath[eCode].first || !nodes[eCode].visited ){
+                if(!restricted || find(allowedAirlines.begin(),allowedAirlines.end(),e.get_airline().get_code()) != allowedAirlines.end()){
+                    nodesPath[eCode] = {nodesPath[q.front()].first + 1, nodesPath[q.front()].second};
+                    nodesPath[eCode].second.push_back({eCode,e.get_airline().get_callSign()});
+                    q.push(eCode);
+                    nodes[eCode].visited = true;
+                }
             }
         }
         q.pop();

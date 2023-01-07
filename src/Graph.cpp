@@ -51,7 +51,7 @@ float Graph::getDistance(float lat1, float lon1, float lat2, float lon2) {
     lat2 = lat2 * M_PI / 180.0;
 
     // apply formula
-    float a = pow(sin(difLat / 2), 2) + pow(sin(difLon1 / 2), 2) * cos(lat1) * cos(lat2);
+    float a = pow(sin(difLat / 2), 2) + pow(sin(difLon / 2), 2) * cos(lat1) * cos(lat2);
     float rad = 6371;
     float c = 2 * asin(sqrt(a));
     return rad * c;

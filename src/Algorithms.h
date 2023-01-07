@@ -13,6 +13,7 @@
 
 #include "Graph.h"
 #include <limits>
+#include <algorithm>
 
 class Algorithms {
 private:
@@ -25,7 +26,7 @@ public:
     Algorithms();
     Algorithms(unordered_map<string, Airline> airlines,unordered_map<string, Airport> airports,Graph flights);
     bool isValidAirportCode(string code);
-    vector<pair<string,string>> bestPath(string a1, string a2);
+    vector<pair<string,string>> bestPath(string a1, string a2, list<string> allowedAirlines);
     string convertCity(string city);
     string convertCoordinates(float lat, float lon);
     string getCityFromCode(string code){return airports[code].get_city();};
