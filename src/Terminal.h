@@ -2,6 +2,11 @@
 // Created by ftmlo on 07/01/2023.
 //
 
+/**
+ * @file Terminal.h
+ * Funções para ler ficheiros
+ */
+
 #ifndef AEDPROJETO2_TERMINAL_H
 #define AEDPROJETO2_TERMINAL_H
 

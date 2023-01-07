@@ -2,6 +2,11 @@
 // Created by NASA on 06/01/2023.
 //
 
+/**
+ * @file FlightController.h
+ * Funções para ler ficheiros
+ */
+
 #ifndef AEDPROJETO2_FLIGHTCONTROLLER_H
 #define AEDPROJETO2_FLIGHTCONTROLLER_H
 

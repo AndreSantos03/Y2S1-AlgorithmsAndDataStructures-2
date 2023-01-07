@@ -2,11 +2,27 @@
 // Created by ftmlo on 07/01/2023.
 //
 
+/**
+ * @file Terminal.cpp
+ * funções relacionadas com o terminal
+ */
+
 #include "Terminal.h"
+
+/**
+ * Construtor de new Terminal: Terminal object
+ * @param airlines companhias aéreas
+ * @param airports aeroportos
+ * @param flights voos
+ */
 
 Terminal::Terminal(unordered_map<string, Airline> airlines, unordered_map<string, Airport> airports, Graph flights) {
     this->algorithms = Algorithms(airlines,airports,flights);
 }
+
+/**
+ *
+ */
 
 void Terminal::IO() {
     cout << "-----Choose an option!-----\n" << endl;
@@ -18,6 +34,10 @@ void Terminal::IO() {
         getBestFlightPath();
     }
 }
+
+/**
+ * Obtêm mlehor maneira de viajar entre dois aeroportos
+ */
 
 void Terminal::getBestFlightPath() {
     while(true){
