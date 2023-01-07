@@ -1,7 +1,3 @@
-//
-// Created by NASA on 06/01/2023.
-//
-
 /**
  * @file Graph.cpp
  * Funções para obter informações, envolvendo grafos

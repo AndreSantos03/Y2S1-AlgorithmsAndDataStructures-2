@@ -1,7 +1,3 @@
-//
-// Created by NASA on 06/01/2023.
-//
-
 /**
  * @file FlightController.cpp
  * Funções para ler informações em ficheiros, em relação aos voos

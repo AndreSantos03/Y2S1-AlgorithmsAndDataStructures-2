@@ -1,7 +1,3 @@
-//
-// Created by NASA on 07/01/2023.
-//
-
 /**
  * @file Algorithms.h
  * Funções para ler ficheiros

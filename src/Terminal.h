@@ -1,7 +1,3 @@
-//
-// Created by ftmlo on 07/01/2023.
-//
-
 /**
  * @file Terminal.h
  * Funções para ler ficheiros

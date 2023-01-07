@@ -1,7 +1,3 @@
-//
-// Created by NASA on 06/01/2023.
-//
-
 /**
  * @file Flight.cpp
  * Funções para obter informações sobre os voos
