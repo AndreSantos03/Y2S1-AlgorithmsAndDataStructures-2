@@ -7,7 +7,7 @@
 
 
 #include "Graph.h"
-
+#include <limits>
 
 class Algorithms {
 private:
@@ -16,12 +16,14 @@ private:
     Graph flights;
     unordered_map<string, Graph::Node> nodes;
 
-    void dfsDistance(string count);
 public:
     Algorithms();
     Algorithms(unordered_map<string, Airline> airlines,unordered_map<string, Airport> airports,Graph flights);
     bool isValidAirportCode(string code);
-    vector<string> bestPath(string a1, string a2);
+    vector<pair<string,string>> bestPath(string a1, string a2);
+    string convertCity(string city);
+    string convertCoordinates(float lat, float lon);
+    string getCityFromCode(string code){return airports[code].get_city();};
 };
 
 
