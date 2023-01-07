@@ -2,6 +2,11 @@
 // Created by NASA on 06/01/2023.
 //
 
+/**
+ * @file Reader.h
+ * Funções para ler ficheiros
+ */
+
 #ifndef AEDPROJETO2_READER_H
 #define AEDPROJETO2_READER_H
 

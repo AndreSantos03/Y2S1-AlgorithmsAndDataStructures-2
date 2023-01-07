@@ -2,7 +2,18 @@
 // Created by NASA on 06/01/2023.
 //
 
+/**
+ * @file Reader.cpp
+ * funções para ler informação dos ficheiros
+ */
+
 #include "Reader.h"
+
+/**
+ * @brief
+ * Lê as companhias aéreas a partir de um ficheiro
+ * @return unordered_map<string, Airline>
+ */
 
 unordered_map<string, Airline> Reader::readAirlines(){
     unordered_map<string, Airline> retHash;
@@ -22,6 +33,12 @@ unordered_map<string, Airline> Reader::readAirlines(){
     f.close();
     return retHash;
 }
+
+/**
+ * @brief
+ * Lê as companhias aéreas a partir de um ficheiro
+ * @return unordered_map<string, Airport>
+ */
 
 unordered_map<string, Airport> Reader::readAirports() {
     unordered_map<string, Airport> retHash;
@@ -44,6 +61,15 @@ unordered_map<string, Airport> Reader::readAirports() {
     f.close();
     return retHash;
 }
+
+/**
+ * @brief
+ * Lê os voos a partir de um ficheiro
+ *
+ * @param airlines companhias aéreas
+ * @param airports aeroportos
+ * @return Graph
+ */
 
 Graph Reader::readFlights(unordered_map<string, Airline> airlines, unordered_map<string, Airport> airports) {
     Graph retGraph;

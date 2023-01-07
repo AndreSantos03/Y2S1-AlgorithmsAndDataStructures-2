@@ -2,6 +2,11 @@
 // Created by NASA on 06/01/2023.
 //
 
+/**
+ * @file Graph.h
+ * Funções para ler ficheiros
+ */
+
 #ifndef AEDPROJETO2_GRAPH_H
 #define AEDPROJETO2_GRAPH_H
 

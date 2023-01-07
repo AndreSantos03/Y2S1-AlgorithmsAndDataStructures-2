@@ -2,9 +2,26 @@
 // Created by NASA on 07/01/2023.
 //
 
+/**
+ * @file Algorithms.cpp
+ * Funções para
+ */
+
 #include "Algorithms.h"
 
+/**
+ * @brief
+ * Construtor default da class Algorithms
+ */
+
 Algorithms::Algorithms() {}
+
+/**
+ * Construtor de new Algorithms: Algorithms object
+ * @param airlines companhias aéreas
+ * @param airports aeroportos
+ * @param flights voos
+ */
 
 Algorithms::Algorithms(unordered_map<string, Airline> airlines, unordered_map<string, Airport> airports, Graph flights) {
     this->airlines = airlines;
@@ -13,10 +30,23 @@ Algorithms::Algorithms(unordered_map<string, Airline> airlines, unordered_map<st
     nodes = flights.nodes;
 }
 
+/**
+ * Verifica se o código do aeroporto existe
+ * @param code código do aeroporto
+ * @return true se o código do aeroporto existir
+ * @return false caso contrário
+ */
+
 bool Algorithms::isValidAirportCode(string code) {
     return (airports.find(code) != airports.end());
 }
 
+/**
+ *
+ * @param a1
+ * @param a2
+ * @return vector<string>
+ */
 
 //BFS Implementation with distance
 vector<pair<string,string>> Algorithms::bestPath(string a1, string a2){
