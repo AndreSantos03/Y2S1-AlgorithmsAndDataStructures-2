@@ -28,6 +28,10 @@ private:
 
     void getBestFlightPath(FlightController &fc);
     void getNumberOfFlights(FlightController &fc);
+    void getNumberOfAirlines(FlightController &fc);
+    void getNumberOfDestinations(FlightController &fc);
+    void getNumberOfCountries(FlightController &fc);
+    void getNumberOfCountriesWithinX(FlightController &fc);
 
  public:
     Terminal(unordered_map<string, Airline> airlines,unordered_map<string, Airport> airports,Graph flights);

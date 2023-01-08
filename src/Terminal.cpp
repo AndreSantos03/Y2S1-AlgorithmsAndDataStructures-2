@@ -25,6 +25,11 @@ void Terminal::IO(FlightController &fc) {
     cout << "-----Choose an option!-----\n" << endl;
     cout << "1: Get best flight pass." << endl;
     cout << "2: Get number of flights departing from a certain airport." << endl;
+    cout << "3: Get number of airlines operating on a certain airport." << endl;
+    cout << "4: Get number of possible destinations departing from a certain airport." << endl;
+    cout << "5: Get number of different countries you can fly to from a certain airport." << endl;
+    cout << "6: Get number of how many different countries you can reach from a certain airport with a maximum number of flights." << endl;
+    cout << "9: Exit." << endl;
 
     cin >> choice;
 
@@ -34,6 +39,74 @@ void Terminal::IO(FlightController &fc) {
     else if (choice == "2"){
         getNumberOfFlights(fc);
     }
+    else if (choice == "3"){
+        getNumberOfAirlines(fc);
+    }
+    else if (choice == "4"){
+        getNumberOfDestinations(fc);
+    }
+    else if (choice == "5"){
+        getNumberOfCountries(fc);
+    }
+    else if (choice == "6"){
+        getNumberOfCountriesWithinX(fc);
+    }
+    else if(choice == "9"){
+
+    }
+}
+
+void Terminal::getNumberOfCountriesWithinX(FlightController &fc) {
+    string sourceCode;
+    cout << "Enter source airport: ";
+    cin >> choice;
+    if (algorithms.isValidAirportCode(choice)) {
+        sourceCode = choice;
+    } else {
+        cout << "You entered an invalid airport code!" << endl;
+    }
+    cout << "\n Enter maximum number of flights: " << endl;
+    int max = 0;
+    cin >> max;
+    if(max>0){
+        cout << endl << "There are " << fc.get_flights().BFL(choice, max+1).size() << " airports reachable within " << max << " flights from this airport." << endl;
+    }
+}
+
+void Terminal::getNumberOfCountries(FlightController &fc) {
+    string sourceCode;
+    cout << "Enter source airport: ";
+    cin >> choice;
+    if (algorithms.isValidAirportCode(choice)) {
+        sourceCode = choice;
+    } else {
+        cout << "You entered an invalid airport code!" << endl;
+    }
+    int sum=0;
+    set<string> diff_airports;
+    list<Flight> flights = fc.get_flights().nodes[choice].adj;
+    for(Flight a : flights){
+        diff_airports.insert(a.get_target().get_country());
+    }
+    cout << endl << "There are " << diff_airports.size() << " reachable from this airport.\n" <<endl;
+}
+
+void Terminal::getNumberOfDestinations(FlightController &fc){
+    string sourceCode;
+    cout << "Enter source airport: ";
+    cin >> choice;
+    if (algorithms.isValidAirportCode(choice)) {
+        sourceCode = choice;
+    } else {
+        cout << "You entered an invalid airport code!" << endl;
+    }
+    int sum=0;
+    set<string> diff_airports;
+    list<Flight> flights = fc.get_flights().nodes[choice].adj;
+    for (Flight a : flights){
+        diff_airports.insert(a.get_target().get_code());
+    }
+    cout << endl << "There are " << diff_airports.size() << " airports reachable from this airport.\n" << endl;
 }
 
 void Terminal::getNumberOfFlights(FlightController &fc) {
@@ -46,7 +119,24 @@ void Terminal::getNumberOfFlights(FlightController &fc) {
         cout << "You entered an invalid airport code!" << endl;
     }
     int sum = fc.get_flights().nodes[choice].adj.size();
-    cout << endl << "This airport has " << sum << " departing flights\n" << endl;
+    cout << endl << "This airport has " << sum << " departing flights.\n" << endl;
+}
+void Terminal::getNumberOfAirlines(FlightController &fc) {
+    string sourceCode;
+    cout << "Enter source airport: ";
+    cin >>choice;
+    if(algorithms.isValidAirportCode(choice)){
+        sourceCode=choice;
+    } else {
+        cout << "You entered an invalid airport code!" << endl;
+    }
+    int sum=0;
+    set<string> diff_airlines;
+    list<Flight> flights = fc.get_flights().nodes[choice].adj;
+    for(Flight a : flights){
+        diff_airlines.insert(a.get_airline().get_code());
+    }
+    cout << endl << "There are " << diff_airlines.size() << " airlines operating on this airport.\n" << endl;
 }
 
 /**
