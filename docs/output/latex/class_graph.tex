@@ -1,0 +1,80 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_graph_1_1_node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}\label{class_graph_ae4c72b8ac4d693c49800a4c7e273654f}} 
+{\bfseries Graph} ()
+\begin{DoxyCompactList}\small\item\em Construtor default da class \mbox{\hyperlink{class_graph}{Graph}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graph_a9a477dd7f52bf84febf3f97fb8a3c102}{add\+Edge}} (\mbox{\hyperlink{class_airport}{Airport}} src, \mbox{\hyperlink{class_airport}{Airport}} dest, \mbox{\hyperlink{class_airline}{Airline}} line, float weight)
+\begin{DoxyCompactList}\small\item\em Adiciona um vértice novo, que corresponde a um voo, ao grafo do aeroporto de origem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float \mbox{\hyperlink{class_graph_a8021d250f11275b891775719acf39173}{get\+Distance}} (float lat1, float lon1, float lat2, float lon2)
+\begin{DoxyCompactList}\small\item\em Obtêm a distância entre dois aeroportos, a partir da sua longitude e latitude. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_a52d5d86990e452a09d9404d4eed03075}\label{class_graph_a52d5d86990e452a09d9404d4eed03075}} 
+unordered\+\_\+map$<$ string, \mbox{\hyperlink{struct_graph_1_1_node}{Node}} $>$ {\bfseries nodes}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a9a477dd7f52bf84febf3f97fb8a3c102}\label{class_graph_a9a477dd7f52bf84febf3f97fb8a3c102}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{source,  }\item[{\mbox{\hyperlink{class_airport}{Airport}}}]{target,  }\item[{\mbox{\hyperlink{class_airline}{Airline}}}]{airline,  }\item[{float}]{distance }\end{DoxyParamCaption})}
+
+
+
+Adiciona um vértice novo, que corresponde a um voo, ao grafo do aeroporto de origem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & aeroporto de origem \\
+\hline
+{\em target} & aeroporto de destino \\
+\hline
+{\em airline} & companhia aérea \\
+\hline
+{\em distance} & distância entre os aeroportos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graph_a8021d250f11275b891775719acf39173}\label{class_graph_a8021d250f11275b891775719acf39173}} 
+\index{Graph@{Graph}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily float Graph\+::get\+Distance (\begin{DoxyParamCaption}\item[{float}]{lat1,  }\item[{float}]{lon1,  }\item[{float}]{lat2,  }\item[{float}]{lon2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtêm a distância entre dois aeroportos, a partir da sua longitude e latitude. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat1} & latitude do aeroporto 1 \\
+\hline
+{\em lon1} & longitude do aeroporto 1 \\
+\hline
+{\em lat2} & latitude do aeroporto 2 \\
+\hline
+{\em lon2} & longitude do aeroporto 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_graph_8h}{Graph.\+h}}\item 
+src/\mbox{\hyperlink{_graph_8cpp}{Graph.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+\hypertarget{_algorithms_8h_source}{}\doxysection{Algorithms.\+h}
+\label{_algorithms_8h_source}\index{src/Algorithms.h@{src/Algorithms.h}}
+\mbox{\hyperlink{_algorithms_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ AEDPROJETO2\_ALGORITHMS\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ AEDPROJETO2\_ALGORITHMS\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_algorithms}{Algorithms}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ unordered\_map<string,\ Airline>\ airlines;}
+\DoxyCodeLine{00017\ \ \ \ \ unordered\_map<string,\ Airport>\ airports;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ flights;}
+\DoxyCodeLine{00019\ \ \ \ \ unordered\_map<string,\ Graph::Node>\ nodes;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_algorithms_a3c881ec0b8a28aa150a8f308bb9d9861}{Algorithms}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_algorithms_a3c881ec0b8a28aa150a8f308bb9d9861}{Algorithms}}(unordered\_map<string,\ Airline>\ airlines,unordered\_map<string,\ Airport>\ airports,\mbox{\hyperlink{class_graph}{Graph}}\ flights);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_algorithms_a497a879565112990c69c7cf0512eb622}{isValidAirportCode}}(\textcolor{keywordtype}{string}\ code);}
+\DoxyCodeLine{00025\ \ \ \ \ vector<pair<string,string>>\ \mbox{\hyperlink{class_algorithms_afb844cc771c968a70aa3c83a6ac64a79}{bestPath}}(\textcolor{keywordtype}{string}\ a1,\ \textcolor{keywordtype}{string}\ a2,\ list<string>\ allowedAirlines);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_algorithms_a0e90628a15954ab3dddef35c72b23091}{convertCity}}(\textcolor{keywordtype}{string}\ city);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_algorithms_ae3b889b0f5386f95f68bd8f485bff1dd}{convertCoordinates}}(\textcolor{keywordtype}{float}\ lat,\ \textcolor{keywordtype}{float}\ lon);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{string}\ getCityFromCode(\textcolor{keywordtype}{string}\ code)\{\textcolor{keywordflow}{return}\ airports[code].get\_city();\};}
+\DoxyCodeLine{00029\ \ \ \ \ list<pair<string,string>>\ \mbox{\hyperlink{class_algorithms_a80269237b05a53fde4c8105fea3412d9}{getFlightsFromAirport}}(\textcolor{keywordtype}{string}\ AirportCode);}
+\DoxyCodeLine{00030\ \ \ \ \ set<string>\ \ \mbox{\hyperlink{class_algorithms_a23949c72f781829ec95f7d14f0053ccd}{getAirlinesFromAirports}}(\textcolor{keywordtype}{string}\ airportCode);}
+\DoxyCodeLine{00031\ \ \ \ \ set<pair<string,string>>\ \mbox{\hyperlink{class_algorithms_a899e39b2db84457649faf490d157c1a6}{getDestinationFromAirports}}(\textcolor{keywordtype}{string}\ airportCode,\textcolor{keywordtype}{int}\ k);}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AEDPROJETO2\_ALGORITHMS\_H}}
+
+\end{DoxyCode}

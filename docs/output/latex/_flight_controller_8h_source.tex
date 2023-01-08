@@ -1,0 +1,35 @@
+\hypertarget{_flight_controller_8h_source}{}\doxysection{Flight\+Controller.\+h}
+\label{_flight_controller_8h_source}\index{src/FlightController.h@{src/FlightController.h}}
+\mbox{\hyperlink{_flight_controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ AEDPROJETO2\_FLIGHTCONTROLLER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ AEDPROJETO2\_FLIGHTCONTROLLER\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_flight_8h}{Flight.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airline_8h}{Airline.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airport_8h}{Airport.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_reader_8h}{Reader.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_flight_controller}{FlightController}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ unordered\_map<string,\ Airline>\ airlines;}
+\DoxyCodeLine{00023\ \ \ \ \ unordered\_map<string,\ Airport>\ airports;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ flights;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_flight_controller_a7a464ac62b6e67b551d91009061a0244}{initialize}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}\ get\_flights()\{\textcolor{keywordflow}{return}\ flights;\}}
+\DoxyCodeLine{00028\ \ \ \ \ unordered\_map<string,\ Airline>\ get\_airlines()\ \{\textcolor{keywordflow}{return}\ airlines;\};}
+\DoxyCodeLine{00029\ \ \ \ \ unordered\_map<string,\ Airport>\ get\_airports()\ \{\textcolor{keywordflow}{return}\ airports;\};}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AEDPROJETO2\_FLIGHTCONTROLLER\_H}}
+
+\end{DoxyCode}

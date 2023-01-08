@@ -1,0 +1,66 @@
+\hypertarget{class_reader}{}\doxysection{Reader Class Reference}
+\label{class_reader}\index{Reader@{Reader}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ \mbox{\hyperlink{class_reader_a733772a367131f942c613f747123c13c}{read\+Airlines}} ()
+\begin{DoxyCompactList}\small\item\em Lê as companhias aéreas a partir de um ficheiro. \end{DoxyCompactList}\item 
+static unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ \mbox{\hyperlink{class_reader_acff97de0c0aa2d712e0d9df33ba2878b}{read\+Airports}} ()
+\begin{DoxyCompactList}\small\item\em Lê as companhias aéreas a partir de um ficheiro. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_graph}{Graph}} \mbox{\hyperlink{class_reader_a17193e073de3aee461ffa5fcf03c4821}{read\+Flights}} (unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ airlines, unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ airports)
+\begin{DoxyCompactList}\small\item\em Lê os voos a partir de um ficheiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reader_a733772a367131f942c613f747123c13c}\label{class_reader_a733772a367131f942c613f747123c13c}} 
+\index{Reader@{Reader}!readAirlines@{readAirlines}}
+\index{readAirlines@{readAirlines}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{readAirlines()}{readAirlines()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ Reader\+::read\+Airlines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lê as companhias aéreas a partir de um ficheiro. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map$<$string, Airline$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reader_acff97de0c0aa2d712e0d9df33ba2878b}\label{class_reader_acff97de0c0aa2d712e0d9df33ba2878b}} 
+\index{Reader@{Reader}!readAirports@{readAirports}}
+\index{readAirports@{readAirports}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{readAirports()}{readAirports()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ Reader\+::read\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lê as companhias aéreas a partir de um ficheiro. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map$<$string, Airport$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_reader_a17193e073de3aee461ffa5fcf03c4821}\label{class_reader_a17193e073de3aee461ffa5fcf03c4821}} 
+\index{Reader@{Reader}!readFlights@{readFlights}}
+\index{readFlights@{readFlights}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{readFlights()}{readFlights()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graph}{Graph}} Reader\+::read\+Flights (\begin{DoxyParamCaption}\item[{unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$}]{airlines,  }\item[{unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$}]{airports }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lê os voos a partir de um ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airlines} & companhias aéreas \\
+\hline
+{\em airports} & aeroportos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_graph}{Graph}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_reader_8h}{Reader.\+h}}\item 
+src/\mbox{\hyperlink{_reader_8cpp}{Reader.\+cpp}}\end{DoxyCompactItemize}

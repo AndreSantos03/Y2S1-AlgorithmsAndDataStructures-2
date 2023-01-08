@@ -128,6 +128,19 @@ AEDProjeto2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AEDProjeto2.dir\build.make CMakeFiles/AEDProjeto2.dir/build
 .PHONY : AEDProjeto2/fast
 
+#=============================================================================
+# Target rules for targets named Doxygen
+
+# Build rule for target.
+Doxygen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Doxygen
+.PHONY : Doxygen
+
+# fast build rule for target.
+Doxygen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Doxygen.dir\build.make CMakeFiles/Doxygen.dir/build
+.PHONY : Doxygen/fast
+
 src/Airline.obj: src/Airline.cpp.obj
 .PHONY : src/Airline.obj
 
@@ -352,6 +365,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Doxygen
 	@echo ... AEDProjeto2
 	@echo ... src/Airline.obj
 	@echo ... src/Airline.i

@@ -1,0 +1,72 @@
+\hypertarget{class_airline}{}\doxysection{Airline Class Reference}
+\label{class_airline}\index{Airline@{Airline}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_airline_a2e6766b5e3a4e3106062c710740a2a32}\label{class_airline_a2e6766b5e3a4e3106062c710740a2a32}} 
+{\bfseries Airline} ()
+\begin{DoxyCompactList}\small\item\em Construtor default da class \mbox{\hyperlink{class_airline}{Airline}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_airline_a1e176e37f50eadf96f50e1bc52f37ed9}{Airline}} (string code, string name, string call\+Sign, string country)
+\begin{DoxyCompactList}\small\item\em Construtor de new \mbox{\hyperlink{class_airline}{Airline}}\+: \mbox{\hyperlink{class_airline}{Airline}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_airline_a434ca8034fe4783dfe5b75c0f4fad317}\label{class_airline_a434ca8034fe4783dfe5b75c0f4fad317}} 
+string {\bfseries get\+\_\+code} () const
+\item 
+\mbox{\Hypertarget{class_airline_ab72b26541b18e8bc3115ada079712e15}\label{class_airline_ab72b26541b18e8bc3115ada079712e15}} 
+string {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_airline_a07ad5785554dd8782ce9bc031e750520}\label{class_airline_a07ad5785554dd8782ce9bc031e750520}} 
+string {\bfseries get\+\_\+call\+Sign} () const
+\item 
+\mbox{\Hypertarget{class_airline_a51b883582943cffad268872498e660c3}\label{class_airline_a51b883582943cffad268872498e660c3}} 
+string {\bfseries get\+\_\+country} () const
+\item 
+bool \mbox{\hyperlink{class_airline_ab4f9ee315f4585150213f109e7f4bbaa}{operator$<$}} (const \mbox{\hyperlink{class_airline}{Airline}} \&airline2) const
+\begin{DoxyCompactList}\small\item\em Override do operator\texorpdfstring{$<$}{<} para poder comparar os códigos de duas companhias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_airline_a1e176e37f50eadf96f50e1bc52f37ed9}\label{class_airline_a1e176e37f50eadf96f50e1bc52f37ed9}} 
+\index{Airline@{Airline}!Airline@{Airline}}
+\index{Airline@{Airline}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{Airline()}{Airline()}}
+{\footnotesize\ttfamily Airline\+::\+Airline (\begin{DoxyParamCaption}\item[{string}]{code,  }\item[{string}]{name,  }\item[{string}]{call\+Sign,  }\item[{string}]{country }\end{DoxyParamCaption})}
+
+
+
+Construtor de new \mbox{\hyperlink{class_airline}{Airline}}\+: \mbox{\hyperlink{class_airline}{Airline}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & código da companhia aérea \\
+\hline
+{\em name} & nome da companhia \\
+\hline
+{\em call\+Sign} & indicativo da companhia \\
+\hline
+{\em country} & país de origem da companhia \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_airline_ab4f9ee315f4585150213f109e7f4bbaa}\label{class_airline_ab4f9ee315f4585150213f109e7f4bbaa}} 
+\index{Airline@{Airline}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Airline@{Airline}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Airline\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_airline}{Airline}} \&}]{airline2 }\end{DoxyParamCaption}) const}
+
+
+
+Override do operator\texorpdfstring{$<$}{<} para poder comparar os códigos de duas companhias. 
+
+\begin{DoxyReturn}{Returns}
+true se o código doa companhia aérea 1 for menor do que o da companhia 2 
+
+false caso contrário 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_airline_8h}{Airline.\+h}}\item 
+src/\mbox{\hyperlink{_airline_8cpp}{Airline.\+cpp}}\end{DoxyCompactItemize}

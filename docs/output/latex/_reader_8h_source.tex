@@ -1,0 +1,33 @@
+\hypertarget{_reader_8h_source}{}\doxysection{Reader.\+h}
+\label{_reader_8h_source}\index{src/Reader.h@{src/Reader.h}}
+\mbox{\hyperlink{_reader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ AEDPROJETO2\_READER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ AEDPROJETO2\_READER\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airline_8h}{Airline.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airport_8h}{Airport.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_flight_8h}{Flight.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_reader}{Reader}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ Airline>\ \mbox{\hyperlink{class_reader_a733772a367131f942c613f747123c13c}{readAirlines}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ unordered\_map<string,\ Airport>\ \mbox{\hyperlink{class_reader_acff97de0c0aa2d712e0d9df33ba2878b}{readAirports}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_graph}{Graph}}\ \mbox{\hyperlink{class_reader_a17193e073de3aee461ffa5fcf03c4821}{readFlights}}(unordered\_map<string,Airline>\ airlines,\ unordered\_map<string,\ Airport>\ airports);}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AEDPROJETO2\_READER\_H}}
+
+\end{DoxyCode}

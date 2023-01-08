@@ -1,0 +1,41 @@
+\hypertarget{_terminal_8h_source}{}\doxysection{Terminal.\+h}
+\label{_terminal_8h_source}\index{src/Terminal.h@{src/Terminal.h}}
+\mbox{\hyperlink{_terminal_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ AEDPROJETO2\_TERMINAL\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ AEDPROJETO2\_TERMINAL\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_flight_8h}{Flight.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_flight_controller_8h}{FlightController.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airline_8h}{Airline.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airport_8h}{Airport.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_reader_8h}{Reader.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_algorithms_8h}{Algorithms.h}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_terminal}{Terminal}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ choice;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_algorithms}{Algorithms}}\ algorithms;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ getBestFlightPath();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ getNumberOfFlights();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ getNumberOfAirlines();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ getNumberOfDestinations();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_terminal}{Terminal}}(unordered\_map<string,\ Airline>\ airlines,unordered\_map<string,\ Airport>\ airports,\mbox{\hyperlink{class_graph}{Graph}}\ flights);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_terminal_af749ee008266b9b6ddc4129471eaf0a1}{IO}}();}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AEDPROJETO2\_TERMINAL\_H}}
+
+\end{DoxyCode}

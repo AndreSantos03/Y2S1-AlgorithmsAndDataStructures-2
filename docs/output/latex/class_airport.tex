@@ -1,0 +1,82 @@
+\hypertarget{class_airport}{}\doxysection{Airport Class Reference}
+\label{class_airport}\index{Airport@{Airport}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_airport_a2fc0f2402c94225b9deaf76176bb887f}\label{class_airport_a2fc0f2402c94225b9deaf76176bb887f}} 
+{\bfseries Airport} ()
+\begin{DoxyCompactList}\small\item\em Construtor default da class \mbox{\hyperlink{class_airport}{Airport}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_airport_af5a04527149a7da975c8382bd9ffedc7}{Airport}} (string code, string name, string city, string country, float latitude, float longitude)
+\begin{DoxyCompactList}\small\item\em Construtor de new \mbox{\hyperlink{class_airport}{Airport}}\+: \mbox{\hyperlink{class_airport}{Airport}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_airport_a566bdf85324794783a0ac319a9e8b513}\label{class_airport_a566bdf85324794783a0ac319a9e8b513}} 
+string {\bfseries get\+\_\+code} () const
+\item 
+\mbox{\Hypertarget{class_airport_aba2a885b9234bc88b099693ab99a4b5e}\label{class_airport_aba2a885b9234bc88b099693ab99a4b5e}} 
+string {\bfseries get\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{class_airport_ad2b9493144e3f909a0f400c658bc9ce1}\label{class_airport_ad2b9493144e3f909a0f400c658bc9ce1}} 
+string {\bfseries get\+\_\+city} () const
+\item 
+\mbox{\Hypertarget{class_airport_a5828a1a9e3fb731634de4aa67aaa4142}\label{class_airport_a5828a1a9e3fb731634de4aa67aaa4142}} 
+string {\bfseries get\+\_\+country} () const
+\item 
+\mbox{\Hypertarget{class_airport_ac899e47d2560327cc884589805dd0bcd}\label{class_airport_ac899e47d2560327cc884589805dd0bcd}} 
+float {\bfseries get\+\_\+latitude} () const
+\item 
+\mbox{\Hypertarget{class_airport_a28ba06c1e555a5eb92f43d838926225e}\label{class_airport_a28ba06c1e555a5eb92f43d838926225e}} 
+float {\bfseries get\+\_\+longitude} () const
+\item 
+bool \mbox{\hyperlink{class_airport_a96fe9bcd9d409849c4128d60f1d8eb61}{operator$<$}} (const \mbox{\hyperlink{class_airport}{Airport}} \&airport2) const
+\begin{DoxyCompactList}\small\item\em Override do operator\texorpdfstring{$<$}{<} para poder comparar os códigos de dois aeroportos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_airport_af5a04527149a7da975c8382bd9ffedc7}\label{class_airport_af5a04527149a7da975c8382bd9ffedc7}} 
+\index{Airport@{Airport}!Airport@{Airport}}
+\index{Airport@{Airport}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{Airport()}{Airport()}}
+{\footnotesize\ttfamily Airport\+::\+Airport (\begin{DoxyParamCaption}\item[{string}]{code,  }\item[{string}]{name,  }\item[{string}]{city,  }\item[{string}]{country,  }\item[{float}]{latitude,  }\item[{float}]{longitude }\end{DoxyParamCaption})}
+
+
+
+Construtor de new \mbox{\hyperlink{class_airport}{Airport}}\+: \mbox{\hyperlink{class_airport}{Airport}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & código do aeroporto \\
+\hline
+{\em name} & nome do aeroporto \\
+\hline
+{\em city} & cidade do aeroporto \\
+\hline
+{\em country} & país do aeroporto \\
+\hline
+{\em latitude} & latitude do aeroporto \\
+\hline
+{\em longitude} & longitude do aeroporto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_airport_a96fe9bcd9d409849c4128d60f1d8eb61}\label{class_airport_a96fe9bcd9d409849c4128d60f1d8eb61}} 
+\index{Airport@{Airport}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Airport\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_airport}{Airport}} \&}]{airport2 }\end{DoxyParamCaption}) const}
+
+
+
+Override do operator\texorpdfstring{$<$}{<} para poder comparar os códigos de dois aeroportos. 
+
+\begin{DoxyReturn}{Returns}
+true se o código do aeroporto 1 for menor do que o do aeroporto 2 
+
+false caso contrário 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_airport_8h}{Airport.\+h}}\item 
+src/\mbox{\hyperlink{_airport_8cpp}{Airport.\+cpp}}\end{DoxyCompactItemize}

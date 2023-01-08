@@ -1,0 +1,33 @@
+\hypertarget{_flight_8h_source}{}\doxysection{Flight.\+h}
+\label{_flight_8h_source}\index{src/Flight.h@{src/Flight.h}}
+\mbox{\hyperlink{_flight_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ AEDPROJETO2\_FLIGHT\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ AEDPROJETO2\_FLIGHT\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airport_8h}{Airport.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_airline_8h}{Airline.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_flight}{Flight}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ source,\ target;}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_airline}{Airline}}\ airline;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ distance;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_flight}{Flight}}(\mbox{\hyperlink{class_airport}{Airport}}\ source,\ \mbox{\hyperlink{class_airport}{Airport}}\ target,\ \mbox{\hyperlink{class_airline}{Airline}}\ airline,\ \textcolor{keywordtype}{float}\ distance);}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ get\_source()\ \{\textcolor{keywordflow}{return}\ source;\};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_airport}{Airport}}\ get\_target()\ \{\textcolor{keywordflow}{return}\ target;\};}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_airline}{Airline}}\ get\_airline()\ \{\textcolor{keywordflow}{return}\ airline;\};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ get\_distance()\ \{\textcolor{keywordflow}{return}\ distance;\};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//AEDPROJETO2\_FLIGHT\_H}}
+
+\end{DoxyCode}

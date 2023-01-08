@@ -1,0 +1,162 @@
+\hypertarget{class_algorithms}{}\doxysection{Algorithms Class Reference}
+\label{class_algorithms}\index{Algorithms@{Algorithms}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_algorithms_a3c881ec0b8a28aa150a8f308bb9d9861}\label{class_algorithms_a3c881ec0b8a28aa150a8f308bb9d9861}} 
+{\bfseries Algorithms} ()
+\begin{DoxyCompactList}\small\item\em Construtor default da class \mbox{\hyperlink{class_algorithms}{Algorithms}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_algorithms_afd569945473993956924882942e7c567}{Algorithms}} (unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$ airlines, unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$ airports, \mbox{\hyperlink{class_graph}{Graph}} flights)
+\item 
+bool \mbox{\hyperlink{class_algorithms_a497a879565112990c69c7cf0512eb622}{is\+Valid\+Airport\+Code}} (string code)
+\item 
+vector$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_algorithms_afb844cc771c968a70aa3c83a6ac64a79}{best\+Path}} (string a1, string a2, list$<$ string $>$ allowed\+Airlines)
+\item 
+string \mbox{\hyperlink{class_algorithms_a0e90628a15954ab3dddef35c72b23091}{convert\+City}} (string city)
+\item 
+string \mbox{\hyperlink{class_algorithms_ae3b889b0f5386f95f68bd8f485bff1dd}{convert\+Coordinates}} (float lat, float lon)
+\item 
+\mbox{\Hypertarget{class_algorithms_a0c87b01ccec53dfc88c6693a6dfd6193}\label{class_algorithms_a0c87b01ccec53dfc88c6693a6dfd6193}} 
+string {\bfseries get\+City\+From\+Code} (string code)
+\item 
+list$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_algorithms_a80269237b05a53fde4c8105fea3412d9}{get\+Flights\+From\+Airport}} (string Airport\+Code)
+\item 
+set$<$ string $>$ \mbox{\hyperlink{class_algorithms_a23949c72f781829ec95f7d14f0053ccd}{get\+Airlines\+From\+Airports}} (string airport\+Code)
+\item 
+set$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{class_algorithms_a899e39b2db84457649faf490d157c1a6}{get\+Destination\+From\+Airports}} (string airport\+Code, int k)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_algorithms_afd569945473993956924882942e7c567}\label{class_algorithms_afd569945473993956924882942e7c567}} 
+\index{Algorithms@{Algorithms}!Algorithms@{Algorithms}}
+\index{Algorithms@{Algorithms}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{Algorithms()}{Algorithms()}}
+{\footnotesize\ttfamily Algorithms\+::\+Algorithms (\begin{DoxyParamCaption}\item[{unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airline}{Airline}} $>$}]{airlines,  }\item[{unordered\+\_\+map$<$ string, \mbox{\hyperlink{class_airport}{Airport}} $>$}]{airports,  }\item[{\mbox{\hyperlink{class_graph}{Graph}}}]{flights }\end{DoxyParamCaption})}
+
+Construtor de new \mbox{\hyperlink{class_algorithms}{Algorithms}}\+: \mbox{\hyperlink{class_algorithms}{Algorithms}} object 
+\begin{DoxyParams}{Parameters}
+{\em airlines} & companhias aéreas \\
+\hline
+{\em airports} & aeroportos \\
+\hline
+{\em flights} & voos \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_algorithms_afb844cc771c968a70aa3c83a6ac64a79}\label{class_algorithms_afb844cc771c968a70aa3c83a6ac64a79}} 
+\index{Algorithms@{Algorithms}!bestPath@{bestPath}}
+\index{bestPath@{bestPath}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{bestPath()}{bestPath()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, string $>$ $>$ Algorithms\+::best\+Path (\begin{DoxyParamCaption}\item[{string}]{a1,  }\item[{string}]{a2,  }\item[{list$<$ string $>$}]{allowed\+Airlines }\end{DoxyParamCaption})}
+
+Breadth-\/first search para encontrar o caminho mais rápido entre dois aeroportos 
+\begin{DoxyParams}{Parameters}
+{\em a1} & dados do aeroporto 1 \\
+\hline
+{\em a2} & dados do aeroporto 2 \\
+\hline
+{\em allowed\+Airlines} & companhias aéreas que realizam viagens entre a1 e a2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$pair$<$string,string$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithms_a0e90628a15954ab3dddef35c72b23091}\label{class_algorithms_a0e90628a15954ab3dddef35c72b23091}} 
+\index{Algorithms@{Algorithms}!convertCity@{convertCity}}
+\index{convertCity@{convertCity}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{convertCity()}{convertCity()}}
+{\footnotesize\ttfamily string Algorithms\+::convert\+City (\begin{DoxyParamCaption}\item[{string}]{city }\end{DoxyParamCaption})}
+
+Permite obter o código do aeroporto, caso exista 
+\begin{DoxyParams}{Parameters}
+{\em city} & cidade do aeroporto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithms_ae3b889b0f5386f95f68bd8f485bff1dd}\label{class_algorithms_ae3b889b0f5386f95f68bd8f485bff1dd}} 
+\index{Algorithms@{Algorithms}!convertCoordinates@{convertCoordinates}}
+\index{convertCoordinates@{convertCoordinates}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{convertCoordinates()}{convertCoordinates()}}
+{\footnotesize\ttfamily string Algorithms\+::convert\+Coordinates (\begin{DoxyParamCaption}\item[{float}]{lat,  }\item[{float}]{lon }\end{DoxyParamCaption})}
+
+Obtêm o código de um aeroporto que está a menor distância do aeroporto com coordenadas lat e lon 
+\begin{DoxyParams}{Parameters}
+{\em lat} & latitude de um aeroporto \\
+\hline
+{\em lon} & longitude de um aeroporto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithms_a23949c72f781829ec95f7d14f0053ccd}\label{class_algorithms_a23949c72f781829ec95f7d14f0053ccd}} 
+\index{Algorithms@{Algorithms}!getAirlinesFromAirports@{getAirlinesFromAirports}}
+\index{getAirlinesFromAirports@{getAirlinesFromAirports}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{getAirlinesFromAirports()}{getAirlinesFromAirports()}}
+{\footnotesize\ttfamily set$<$ string $>$ Algorithms\+::get\+Airlines\+From\+Airports (\begin{DoxyParamCaption}\item[{string}]{airport\+Code }\end{DoxyParamCaption})}
+
+Obtêm as companhias aéreas que trabalham num certo aeroporto 
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & código do aeroporto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set$<$string$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithms_a899e39b2db84457649faf490d157c1a6}\label{class_algorithms_a899e39b2db84457649faf490d157c1a6}} 
+\index{Algorithms@{Algorithms}!getDestinationFromAirports@{getDestinationFromAirports}}
+\index{getDestinationFromAirports@{getDestinationFromAirports}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{getDestinationFromAirports()}{getDestinationFromAirports()}}
+{\footnotesize\ttfamily set$<$ pair$<$ string, string $>$ $>$ Algorithms\+::get\+Destination\+From\+Airports (\begin{DoxyParamCaption}\item[{string}]{airport\+Code,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+Retorna a cidade e o nome dos aeroportos que ficam a uma distância k ou menos de um certo aeroporto 
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & código do aeroporto \\
+\hline
+{\em k} & certa distância \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set$<$pair$<$string, string$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithms_a80269237b05a53fde4c8105fea3412d9}\label{class_algorithms_a80269237b05a53fde4c8105fea3412d9}} 
+\index{Algorithms@{Algorithms}!getFlightsFromAirport@{getFlightsFromAirport}}
+\index{getFlightsFromAirport@{getFlightsFromAirport}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{getFlightsFromAirport()}{getFlightsFromAirport()}}
+{\footnotesize\ttfamily list$<$ pair$<$ string, string $>$ $>$ Algorithms\+::get\+Flights\+From\+Airport (\begin{DoxyParamCaption}\item[{string}]{airport\+Code }\end{DoxyParamCaption})}
+
+Permite obter as viagens feitas a partir de um aeroporto, feitas por uma certa companhia, até outros aeroportos 
+\begin{DoxyParams}{Parameters}
+{\em airport\+Code} & código do aeroporto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list$<$pair$<$string, string$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_algorithms_a497a879565112990c69c7cf0512eb622}\label{class_algorithms_a497a879565112990c69c7cf0512eb622}} 
+\index{Algorithms@{Algorithms}!isValidAirportCode@{isValidAirportCode}}
+\index{isValidAirportCode@{isValidAirportCode}!Algorithms@{Algorithms}}
+\doxysubsubsection{\texorpdfstring{isValidAirportCode()}{isValidAirportCode()}}
+{\footnotesize\ttfamily bool Algorithms\+::is\+Valid\+Airport\+Code (\begin{DoxyParamCaption}\item[{string}]{code }\end{DoxyParamCaption})}
+
+Verifica se o código do aeroporto existe 
+\begin{DoxyParams}{Parameters}
+{\em code} & código do aeroporto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o código do aeroporto existir 
+
+false caso contrário 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_algorithms_8h}{Algorithms.\+h}}\item 
+src/\mbox{\hyperlink{_algorithms_8cpp}{Algorithms.\+cpp}}\end{DoxyCompactItemize}
