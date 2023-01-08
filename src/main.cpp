@@ -17,7 +17,7 @@ int main() {
     Terminal terminal(fc.get_airlines(),fc.get_airports(),fc.get_flights());
 
     while(true){
-        terminal.IO(fc);
+        terminal.IO();
     }
 }
 

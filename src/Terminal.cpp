@@ -21,36 +21,29 @@ Terminal::Terminal(unordered_map<string, Airline> airlines, unordered_map<string
  * Inicializa o FlightController, e permite obter informações sobre viajens, companhias e aeroportos
  */
 
-void Terminal::IO(FlightController &fc) {
+void Terminal::IO() {
     cout << "-----Choose an option!-----\n" << endl;
     cout << "1: Get best flight pass." << endl;
     cout << "2: Get number of flights departing from a certain airport." << endl;
     cout << "3: Get number of airlines operating on a certain airport." << endl;
-    cout << "4: Get number of possible destinations departing from a certain airport." << endl;
-    cout << "5: Get number of different countries you can fly to from a certain airport." << endl;
-    cout << "6: Get number of how many different countries you can reach from a certain airport with a maximum number of flights." << endl;
+    cout << "4: Get number of how many different airports you can reach from a certain airport with a maximum number of flights." << endl;
     cout << "9: Exit." << endl;
 
     cin >> choice;
 
     if(choice == "1"){
-        getBestFlightPath(fc);
+        getBestFlightPath();
     }
     else if (choice == "2"){
-        getNumberOfFlights(fc);
+        getNumberOfFlights();
     }
     else if (choice == "3"){
-        getNumberOfAirlines(fc);
+        getNumberOfAirlines();
     }
     else if (choice == "4"){
-        getNumberOfDestinations(fc);
+        getNumberOfDestinations();
     }
-    else if (choice == "5"){
-        getNumberOfCountries(fc);
-    }
-    else if (choice == "6"){
-        getNumberOfCountriesWithinX(fc);
-    }
+
     else if(choice == "9"){
 
     }
@@ -61,67 +54,37 @@ void Terminal::IO(FlightController &fc) {
  * @param fc  FlightController
  */
 
-void Terminal::getNumberOfCountriesWithinX(FlightController &fc) {
-    string sourceCode;
-    cout << "Enter source airport: ";
-    cin >> choice;
-    if (algorithms.isValidAirportCode(choice)) {
-        sourceCode = choice;
-    } else {
-        cout << "You entered an invalid airport code!" << endl;
-    }
-    cout << "\n Enter maximum number of flights: " << endl;
-    int max = 0;
-    cin >> max;
-    if(max>0){
-        cout << endl << "There are " << fc.get_flights().BFL(choice, max+1).size() << " airports reachable within " << max << " flights from this airport." << endl;
-    }
-}
-
 /**
  * Obtêm o número de países, para o qual um aeroporto faz viagens
  * @param fc FlightController
  */
 
-void Terminal::getNumberOfCountries(FlightController &fc) {
-    string sourceCode;
-    cout << "Enter source airport: ";
-    cin >> choice;
-    if (algorithms.isValidAirportCode(choice)) {
-        sourceCode = choice;
-    } else {
-        cout << "You entered an invalid airport code!" << endl;
-    }
-    int sum=0;
-    set<string> diff_airports;
-    list<Flight> flights = fc.get_flights().nodes[choice].adj;
-    for(Flight a : flights){
-        diff_airports.insert(a.get_target().get_country());
-    }
-    cout << endl << "There are " << diff_airports.size() << " reachable from this airport.\n" <<endl;
-}
 
 /**
  * Obtêm o número de aeroportos, para o qual um aeroporto de origem viaja
  * @param fc FlightController
  */
 
-void Terminal::getNumberOfDestinations(FlightController &fc){
+void Terminal::getNumberOfDestinations(){
     string sourceCode;
-    cout << "Enter source airport: ";
+    while(true){
+        cout << "Enter source airport: ";
+        cin >> choice;
+        if (algorithms.isValidAirportCode(choice)) {
+            sourceCode = choice;
+            break;
+        } else {
+            cout << "You entered an invalid airport code!" << endl;
+        }
+    }
+    int max;
+    cout << "Enter max number of flights: ";
     cin >> choice;
-    if (algorithms.isValidAirportCode(choice)) {
-        sourceCode = choice;
-    } else {
-        cout << "You entered an invalid airport code!" << endl;
+    max = stoi(choice);
+    set<pair<string,string>> airportsAndCities = algorithms.getDestinationFromAirports(sourceCode,max);
+    for(auto s:airportsAndCities){
+        cout << "You can reach the aiport " << s.first << " in city " << s.second << "." << endl;
     }
-    int sum=0;
-    set<string> diff_airports;
-    list<Flight> flights = fc.get_flights().nodes[choice].adj;
-    for (Flight a : flights){
-        diff_airports.insert(a.get_target().get_code());
-    }
-    cout << endl << "There are " << diff_airports.size() << " airports reachable from this airport.\n" << endl;
 }
 
 /**
@@ -129,7 +92,7 @@ void Terminal::getNumberOfDestinations(FlightController &fc){
  * @param fc FlightController
  */
 
-void Terminal::getNumberOfFlights(FlightController &fc) {
+void Terminal::getNumberOfFlights() {
     string sourceCode;
     cout << "Enter source airport: ";
     cin >> choice;
@@ -138,8 +101,27 @@ void Terminal::getNumberOfFlights(FlightController &fc) {
     } else {
         cout << "You entered an invalid airport code!" << endl;
     }
-    int sum = fc.get_flights().nodes[choice].adj.size();
-    cout << endl << "This airport has " << sum << " departing flights.\n" << endl;
+    list<pair<string, string>> flightsFromAirport = algorithms.getFlightsFromAirport(sourceCode);
+    cout << endl << "This airport has " << flightsFromAirport.size() << " departing flights." << endl;
+
+    while(true){
+        cout << "Do you want a listing of said flights? : Y/N";
+        cin >> choice;
+        if(choice == "Y" || choice == "y"){
+            for(pair<string,string> s : flightsFromAirport){
+                cout << "Flight from airline " << s.first << " to the Airport " << s.second << "." << endl;
+            }
+            break;
+        }
+        else if(choice == "N" || choice == "n"){
+            break;
+        }
+        else{
+            cout << "You entered an invalid input!" << endl;
+        }
+    }
+
+    IO();
 }
 
 /**
@@ -147,22 +129,39 @@ void Terminal::getNumberOfFlights(FlightController &fc) {
  * @param fc FlightController
  */
 
-void Terminal::getNumberOfAirlines(FlightController &fc) {
+void Terminal::getNumberOfAirlines() {
     string sourceCode;
     cout << "Enter source airport: ";
     cin >>choice;
-    if(algorithms.isValidAirportCode(choice)){
-        sourceCode=choice;
-    } else {
-        cout << "You entered an invalid airport code!" << endl;
+    while(true){
+        if(algorithms.isValidAirportCode(choice)){
+            sourceCode=choice;
+            break;
+        } else {
+            cout << "You entered an invalid airport code!" << endl;
+        }
     }
     int sum=0;
-    set<string> diff_airlines;
-    list<Flight> flights = fc.get_flights().nodes[choice].adj;
-    for(Flight a : flights){
-        diff_airlines.insert(a.get_airline().get_code());
+    set<string>  air = algorithms.getAirlinesFromAirports(choice);
+    cout << endl << "There are " << air.size() << " airlines operating on this airport.\n" << endl;
+
+    while(true){
+        cout << "Do you want a listing of said flights? : Y/N";
+        cin >> choice;
+        if(choice == "Y" || choice == "y"){
+            for(string s : air){
+                cout << s << endl;
+            }
+            break;
+        }
+        else if(choice == "N" || choice == "n"){
+            break;
+        }
+        else{
+            cout << "You entered an invalid input!" << endl;
+        }
     }
-    cout << endl << "There are " << diff_airlines.size() << " airlines operating on this airport.\n" << endl;
+    IO();
 }
 
 /**
@@ -170,7 +169,7 @@ void Terminal::getNumberOfAirlines(FlightController &fc) {
  * @param fc FlightController
  */
 
-void Terminal::getBestFlightPath(FlightController &fc) {
+void Terminal::getBestFlightPath() {
     string sourceCode;
     string targetCode;
     cout << "-----Choose an option!-----\n" << endl;
@@ -299,5 +298,5 @@ void Terminal::getBestFlightPath(FlightController &fc) {
     catch(...) {
         cout << "Couldn't find a path with such airline!";
     }
-    IO(fc);
+    IO();
 }

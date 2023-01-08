@@ -26,6 +26,9 @@ public:
     string convertCity(string city);
     string convertCoordinates(float lat, float lon);
     string getCityFromCode(string code){return airports[code].get_city();};
+    list<pair<string,string>> getFlightsFromAirport(string AirportCode);
+    set<string>  getAirlinesFromAirports(string airportCode);
+    set<pair<string,string>> getDestinationFromAirports(string airportCode,int k);
 };
 
 

@@ -25,6 +25,7 @@ public:
     struct Node{
         list<Flight> adj;
         bool visited;
+        int dist;
     };
     unordered_map<string, Node> nodes;
     Graph();

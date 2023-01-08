@@ -123,6 +123,52 @@ string Algorithms::convertCoordinates(float lat, float lon) {
     return code;
 }
 
+list<pair<string, string>> Algorithms::getFlightsFromAirport(string airportCode) {
+    list<pair<string,string>> retList;
+    for(Flight f : nodes[airportCode].adj){
+        retList.push_back({f.get_airline().get_name(), f.get_target().get_name()});
+    }
+    return retList;
+}
+
+set<string> Algorithms::getAirlinesFromAirports(string airportCode) {
+    set<string> retSet;
+    for(Flight f : nodes[airportCode].adj){
+        retSet.insert(f.get_airline().get_name());
+    }
+    return retSet;
+}
+
+
+set<pair<string, string>> Algorithms::getDestinationFromAirports(string airportCode, int k) {
+    set<pair<string, string>> retSet;
+    for(auto & node:nodes){
+        node.second.visited = false;
+        node.second.dist = -1;
+    }
+    queue<string> q;
+    q.push(airportCode);
+    nodes[airportCode].visited = true;
+    nodes[airportCode].dist = 0;
+
+    while(!q.empty()){
+        string u = q.front(); q.pop();
+        for(auto e: nodes[u].adj){
+            string w = e.get_airline().get_code();
+            if(!nodes[w].visited){
+                q.push(w);
+                nodes[w].visited =true;
+                nodes[w].dist = nodes[u].dist + 1;
+                if(nodes[w].dist <=k){
+                    retSet.insert({e.get_source().get_name(),e.get_source().get_city()});
+                }
+            }
+        }
+    }
+    return retSet;
+}
+
+
 
 
 
