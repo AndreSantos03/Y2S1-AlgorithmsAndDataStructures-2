@@ -16,7 +16,6 @@ Airport::Airport() {}
 /**
  * @brief
  * Construtor de new Airport: Airport object
- *
  * @param code código do aeroporto
  * @param name nome do aeroporto
  * @param city cidade do aeroporto

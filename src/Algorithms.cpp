@@ -123,6 +123,12 @@ string Algorithms::convertCoordinates(float lat, float lon) {
     return code;
 }
 
+/**
+ * Permite obter as viagens feitas a partir de um aeroporto, feitas por uma certa companhia, até outros aeroportos
+ * @param airportCode código do aeroporto
+ * @return list<pair<string, string>>
+ */
+
 list<pair<string, string>> Algorithms::getFlightsFromAirport(string airportCode) {
     list<pair<string,string>> retList;
     for(Flight f : nodes[airportCode].adj){
@@ -131,6 +137,12 @@ list<pair<string, string>> Algorithms::getFlightsFromAirport(string airportCode)
     return retList;
 }
 
+/**
+ * Obtêm as companhias aéreas que trabalham num certo aeroporto
+ * @param airportCode código do aeroporto
+ * @return set<string>
+ */
+
 set<string> Algorithms::getAirlinesFromAirports(string airportCode) {
     set<string> retSet;
     for(Flight f : nodes[airportCode].adj){
@@ -138,6 +150,13 @@ set<string> Algorithms::getAirlinesFromAirports(string airportCode) {
     }
     return retSet;
 }
+
+/**
+ * Retorna a cidade e o nome dos aeroportos que ficam a uma distância k ou menos de um certo aeroporto
+ * @param airportCode código do aeroporto
+ * @param k certa distância
+ * @return set<pair<string, string>>
+ */
 
 
 set<pair<string, string>> Algorithms::getDestinationFromAirports(string airportCode, int k) {

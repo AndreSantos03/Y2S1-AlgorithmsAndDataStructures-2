@@ -18,7 +18,7 @@ Terminal::Terminal(unordered_map<string, Airline> airlines, unordered_map<string
 }
 
 /**
- * Inicializa o FlightController, e permite obter informações sobre viajens, companhias e aeroportos
+ * Inicializa o Terminal
  */
 
 void Terminal::IO() {
@@ -50,19 +50,7 @@ void Terminal::IO() {
 }
 
 /**
- * Obtêm o número máximo de voos, que um aeroporto de origem faz, caso este exista
- * @param fc  FlightController
- */
-
-/**
- * Obtêm o número de países, para o qual um aeroporto faz viagens
- * @param fc FlightController
- */
-
-
-/**
- * Obtêm o número de aeroportos, para o qual um aeroporto de origem viaja
- * @param fc FlightController
+ * Obtêm o número de destinos que podem ser atingidos a partir de um certo aeroporto
  */
 
 void Terminal::getNumberOfDestinations(){
@@ -88,8 +76,7 @@ void Terminal::getNumberOfDestinations(){
 }
 
 /**
- * Pesquisa o número de voos que estão a partir de um aeroporto de origem
- * @param fc FlightController
+ * Retorna o número de voos a sair de um certo aeroporto, e acompanhia que os executa
  */
 
 void Terminal::getNumberOfFlights() {
@@ -125,8 +112,7 @@ void Terminal::getNumberOfFlights() {
 }
 
 /**
- * Retorna o número de companhias aéreas que trabalham num determinado aeroporto
- * @param fc FlightController
+ * Retorna o número de companhias aéreas que trabalham num certo aeroporto
  */
 
 void Terminal::getNumberOfAirlines() {
@@ -166,7 +152,6 @@ void Terminal::getNumberOfAirlines() {
 
 /**
  * Retorna o caminho mais rápido entre dois aeroportos
- * @param fc FlightController
  */
 
 void Terminal::getBestFlightPath() {

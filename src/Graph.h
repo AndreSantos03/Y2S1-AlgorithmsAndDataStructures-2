@@ -30,8 +30,6 @@ public:
     unordered_map<string, Node> nodes;
     Graph();
     void addEdge(Airport src, Airport dest, Airline line, float weight);
-    vector<string> BFS(string s, string f, unordered_map<string, Airport> airports);
-    set<string> BFL(string s, int d);
     static float getDistance(float lat1, float lon1, float lat2, float lon2);
 };
 
