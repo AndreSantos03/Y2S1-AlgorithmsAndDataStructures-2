@@ -15,12 +15,15 @@ using namespace std;
  * @return int
  */
 
-int main() {
-    FlightController flightController = FlightController();
 
-    Terminal terminal(flightController.get_airlines(),flightController.get_airports(),flightController.get_flights());
+int main() {
+    FlightController fc;
+    fc.initialize();
+
+    Terminal terminal(fc.get_airlines(),fc.get_airports(),fc.get_flights());
 
     while(true){
-        terminal.IO();
+        terminal.IO(fc);
     }
 }
+

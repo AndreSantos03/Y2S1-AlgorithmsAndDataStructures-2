@@ -26,11 +26,12 @@ private:
     string choice;
     Algorithms algorithms;
 
-    void getBestFlightPath();
+    void getBestFlightPath(FlightController &fc);
+    void getNumberOfFlights(FlightController &fc);
 
  public:
     Terminal(unordered_map<string, Airline> airlines,unordered_map<string, Airport> airports,Graph flights);
-    void IO();
+    void IO(FlightController &fc);
 };
 
 #endif //AEDPROJETO2_TERMINAL_H

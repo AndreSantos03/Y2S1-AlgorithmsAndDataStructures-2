@@ -23,8 +23,7 @@ private:
     unordered_map<string, Airport> airports;
     Graph flights;
 public:
-    FlightController();
-
+    void initialize();
     Graph get_flights(){return flights;}
     unordered_map<string, Airline> get_airlines() {return airlines;};
     unordered_map<string, Airport> get_airports() {return airports;};

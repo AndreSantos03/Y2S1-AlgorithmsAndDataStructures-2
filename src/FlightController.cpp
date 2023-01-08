@@ -10,7 +10,7 @@
  * Construtor default da class FlightController
  */
 
-FlightController::FlightController() {
+void FlightController::initialize() {
     airlines = Reader::readAirlines();
     airports = Reader::readAirports();
     flights = Reader::readFlights(airlines,airports);

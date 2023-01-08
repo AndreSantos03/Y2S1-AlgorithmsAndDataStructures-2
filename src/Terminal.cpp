@@ -5,6 +5,7 @@
 
 #include "Terminal.h"
 
+
 /**
  * Construtor de new Terminal: Terminal object
  * @param airlines companhias aéreas
@@ -20,22 +21,39 @@ Terminal::Terminal(unordered_map<string, Airline> airlines, unordered_map<string
  *
  */
 
-void Terminal::IO() {
+void Terminal::IO(FlightController &fc) {
     cout << "-----Choose an option!-----\n" << endl;
     cout << "1: Get best flight pass." << endl;
+    cout << "2: Get number of flights departing from a certain airport." << endl;
 
     cin >> choice;
 
     if(choice == "1"){
-        getBestFlightPath();
+        getBestFlightPath(fc);
+    }
+    else if (choice == "2"){
+        getNumberOfFlights(fc);
     }
 }
 
+void Terminal::getNumberOfFlights(FlightController &fc) {
+    string sourceCode;
+    cout << "Enter source airport: ";
+    cin >> choice;
+    if (algorithms.isValidAirportCode(choice)) {
+        sourceCode = choice;
+    } else {
+        cout << "You entered an invalid airport code!" << endl;
+    }
+    int sum = fc.get_flights().nodes[choice].adj.size();
+    cout << endl << "This airport has " << sum << " departing flights\n" << endl;
+}
+
 /**
- * Obtêm mlehor maneira de viajar entre dois aeroportos
+ * Obtém a melhor maneira de viajar entre dois aeroportos
  */
 
-void Terminal::getBestFlightPath() {
+void Terminal::getBestFlightPath(FlightController &fc) {
     string sourceCode;
     string targetCode;
     cout << "-----Choose an option!-----\n" << endl;
@@ -164,5 +182,5 @@ void Terminal::getBestFlightPath() {
     catch(...) {
         cout << "Couldn't find a path with such airline!";
     }
-    IO();
+    IO(fc);
 }
