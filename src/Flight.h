@@ -24,7 +24,6 @@ public:
     Airport get_source() {return source;};
     Airport get_target() {return target;};
     Airline get_airline() {return airline;};
-    float get_distance() {return distance;};
 };
 
 

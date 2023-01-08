@@ -21,7 +21,6 @@ public:
     string get_code() const {return code;};
     string get_name() const {return name;};
     string get_callSign() const {return callSign;};
-    string get_country() const {return country;};
     bool operator<(const Airline &airline2) const;
 };
 
