@@ -38,10 +38,11 @@ bool Algorithms::isValidAirportCode(string code) {
 }
 
 /**
- *
- * @param a1
- * @param a2
- * @return vector<string>
+ * Breadth-first search para encontrar o caminho mais rápido entre dois aeroportos
+ * @param a1 dados do aeroporto 1
+ * @param a2 dados do aeroporto 2
+ * @param allowedAirlines companhias aéreas que realizam viagens entre a1 e a2
+ * @return vector<pair<string,string>>
  */
 
 //BFS Implementation with distance
@@ -87,6 +88,12 @@ vector<pair<string,string>> Algorithms::bestPath(string a1, string a2, list<stri
     return nodesPath[fastest].second;
 }
 
+/**
+ * Permite obter o código do aeroporto, caso exista
+ * @param city cidade do aeroporto
+ * @return string
+ */
+
 string Algorithms::convertCity(string city) {
     for(auto a : airports){
         if(a.second.get_city() == city){
@@ -95,6 +102,13 @@ string Algorithms::convertCity(string city) {
     }
     return "NONE";
 }
+
+/**
+ * Obtêm o código de um aeroporto que está a menor distância do aeroporto com coordenadas lat e lon
+ * @param lat latitude de um aeroporto
+ * @param lon longitude de um aeroporto
+ * @return string
+ */
 
 string Algorithms::convertCoordinates(float lat, float lon) {
     float minDistance = std::numeric_limits<float>::max();

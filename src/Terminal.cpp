@@ -18,7 +18,7 @@ Terminal::Terminal(unordered_map<string, Airline> airlines, unordered_map<string
 }
 
 /**
- *
+ * Inicializa o FlightController, e permite obter informações sobre viajens, companhias e aeroportos
  */
 
 void Terminal::IO(FlightController &fc) {
@@ -56,6 +56,11 @@ void Terminal::IO(FlightController &fc) {
     }
 }
 
+/**
+ * Obtêm o número máximo de voos, que um aeroporto de origem faz, caso este exista
+ * @param fc  FlightController
+ */
+
 void Terminal::getNumberOfCountriesWithinX(FlightController &fc) {
     string sourceCode;
     cout << "Enter source airport: ";
@@ -72,6 +77,11 @@ void Terminal::getNumberOfCountriesWithinX(FlightController &fc) {
         cout << endl << "There are " << fc.get_flights().BFL(choice, max+1).size() << " airports reachable within " << max << " flights from this airport." << endl;
     }
 }
+
+/**
+ * Obtêm o número de países, para o qual um aeroporto faz viagens
+ * @param fc FlightController
+ */
 
 void Terminal::getNumberOfCountries(FlightController &fc) {
     string sourceCode;
@@ -91,6 +101,11 @@ void Terminal::getNumberOfCountries(FlightController &fc) {
     cout << endl << "There are " << diff_airports.size() << " reachable from this airport.\n" <<endl;
 }
 
+/**
+ * Obtêm o número de aeroportos, para o qual um aeroporto de origem viaja
+ * @param fc FlightController
+ */
+
 void Terminal::getNumberOfDestinations(FlightController &fc){
     string sourceCode;
     cout << "Enter source airport: ";
@@ -109,6 +124,11 @@ void Terminal::getNumberOfDestinations(FlightController &fc){
     cout << endl << "There are " << diff_airports.size() << " airports reachable from this airport.\n" << endl;
 }
 
+/**
+ * Pesquisa o número de voos que estão a partir de um aeroporto de origem
+ * @param fc FlightController
+ */
+
 void Terminal::getNumberOfFlights(FlightController &fc) {
     string sourceCode;
     cout << "Enter source airport: ";
@@ -121,6 +141,12 @@ void Terminal::getNumberOfFlights(FlightController &fc) {
     int sum = fc.get_flights().nodes[choice].adj.size();
     cout << endl << "This airport has " << sum << " departing flights.\n" << endl;
 }
+
+/**
+ * Retorna o número de companhias aéreas que trabalham num determinado aeroporto
+ * @param fc FlightController
+ */
+
 void Terminal::getNumberOfAirlines(FlightController &fc) {
     string sourceCode;
     cout << "Enter source airport: ";
@@ -140,7 +166,8 @@ void Terminal::getNumberOfAirlines(FlightController &fc) {
 }
 
 /**
- * Obtém a melhor maneira de viajar entre dois aeroportos
+ * Retorna o caminho mais rápido entre dois aeroportos
+ * @param fc FlightController
  */
 
 void Terminal::getBestFlightPath(FlightController &fc) {

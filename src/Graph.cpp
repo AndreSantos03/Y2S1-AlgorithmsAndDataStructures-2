@@ -20,7 +20,6 @@ Graph::Graph(){}
  * @param target aeroporto de destino
  * @param airline companhia aérea
  * @param distance distância entre os aeroportos
- * @return void
  */
 
 void Graph::addEdge(Airport source, Airport target, Airline airline,float distance)

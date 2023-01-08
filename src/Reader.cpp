@@ -61,7 +61,6 @@ unordered_map<string, Airport> Reader::readAirports() {
 /**
  * @brief
  * Lê os voos a partir de um ficheiro
- *
  * @param airlines companhias aéreas
  * @param airports aeroportos
  * @return Graph

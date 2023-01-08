@@ -6,8 +6,7 @@
 #include "FlightController.h"
 
 /**
- * @brief
- * Construtor default da class FlightController
+ * Lê as companhias aéreas, aeroportos e voos, a partir de ficheiros
  */
 
 void FlightController::initialize() {

@@ -8,7 +8,6 @@
 /**
  * @brief
  * Construtor de new Flight: Flight object
- *
  * @param source aeroporto de origem
  * @param target aeroporto de destino
  * @param airline companhia aérea

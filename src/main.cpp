@@ -3,18 +3,12 @@
 #include "Terminal.h"
 #include "Algorithms.h"
 
-/**
- * @file main.cpp
- * Inicializa todas as classes, da end do input e do output e processa os pedidos de informação de aeroportos, voos e companhias aéreas
- */
-
 using namespace std;
 
 /**
- * Inicializa todas as classes
+ * Inicializa o flightController e o Terminal
  * @return int
  */
-
 
 int main() {
     FlightController fc;
